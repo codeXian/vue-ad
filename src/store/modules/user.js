@@ -2,7 +2,12 @@ import { login } from '@/api/login'
 
 const user = {
   state: {
-    name: 'user'
+    name: ''
+  },
+  mutations: {
+    SET_NAME: (state, name) => {
+      state.name = name
+    }
   },
   actions: {
     // 登录
@@ -13,6 +18,7 @@ const user = {
           .then(response => {
             const data = response.data
             if (data.status) {
+              commit('SET_NAME', username)
               resolve()
             } else {
               reject(data.error)

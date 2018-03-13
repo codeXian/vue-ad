@@ -10,7 +10,12 @@ import {
   Form,
   FormItem,
   Input,
-  Button
+  Button,
+  Aside,
+  Menu,
+  MenuItem,
+  Submenu,
+  MenuItemGroup
 } from 'element-ui'
 import App from './App'
 import router from './router'
@@ -30,6 +35,11 @@ Vue.use(Form)
 Vue.use(FormItem)
 Vue.use(Input)
 Vue.use(Button)
+Vue.use(Aside)
+Vue.use(Menu)
+Vue.use(MenuItem)
+Vue.use(Submenu)
+Vue.use(MenuItemGroup)
 
 /* eslint-disable no-new */
 new Vue({
