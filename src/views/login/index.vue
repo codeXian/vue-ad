@@ -10,24 +10,33 @@
           </div>
         </el-header>
         <el-main>
-          <el-form :model="loginForm" class="login-form" :rules="loginRules" ref="loginForm">
+          <el-form :model="loginForm"
+                   class="login-form"
+                   :rules="loginRules"
+                   ref="loginForm">
             <el-form-item prop="username">
               <span class="icon-container">
                 <svg-icon icon-class="user"></svg-icon>
               </span>
-              <el-input v-model="loginForm.username" placeholder="username"></el-input>
+              <el-input v-model="loginForm.username"
+                        placeholder="username"></el-input>
             </el-form-item>
             <el-form-item prop="password">
               <span class="icon-container">
                 <svg-icon icon-class="password"></svg-icon>
               </span>
-              <el-input v-model="loginForm.password" :type="passwordType" placeholder="password"></el-input>
-              <span class="icon-container icon-show-pointer" @click="changePassWordType">
+              <el-input v-model="loginForm.password"
+                        :type="passwordType"
+                        placeholder="password"></el-input>
+              <span class="icon-container icon-show-pointer"
+                    @click="changePassWordType">
                 <svg-icon icon-class="eye"></svg-icon>
               </span>
             </el-form-item>
             <el-form-item>
-              <el-button type="primary" @click.native.prevent="handleLogin" :loading="loading">Sign in</el-button>
+              <el-button type="primary"
+                         @click.native.prevent="handleLogin"
+                         :loading="loading">Sign in</el-button>
             </el-form-item>
             <el-form-item style="border:none; background: transparent">
               <div class="footer">
@@ -45,7 +54,7 @@
 <script>
 import { isVaildUsername } from '@/utils/validate'
 export default {
-  data() {
+  data () {
     const validateUsername = (rule, value, callback) => {
       if (!isVaildUsername(value)) {
         callback(new Error('请输入正确的用户名'))
@@ -78,14 +87,14 @@ export default {
     }
   },
   methods: {
-    changePassWordType() {
+    changePassWordType () {
       if (this.passwordType === 'password') {
         this.passwordType = ''
       } else {
         this.passwordType = 'password'
       }
     },
-    handleLogin() {
+    handleLogin () {
       this.$refs.loginForm.validate(valid => {
         if (valid) {
           this.loading = false

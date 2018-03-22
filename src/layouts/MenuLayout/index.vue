@@ -1,9 +1,7 @@
 <template>
   <div class="app-wrapper">
     <el-container>
-      <el-aside width="256px">
-        <sider-bar></sider-bar>
-      </el-aside>
+      <sider-bar></sider-bar>
       <el-container>
         <el-header style="padding:0">
           <nav-bar></nav-bar>

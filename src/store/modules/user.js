@@ -2,7 +2,7 @@ import { login } from '@/api/login'
 
 const user = {
   state: {
-    name: ''
+    name: '我是vuex默认账号名'
   },
   mutations: {
     SET_NAME: (state, name) => {
@@ -11,7 +11,7 @@ const user = {
   },
   actions: {
     // 登录
-    Login({ commit }, userInfo) {
+    Login ({ commit }, userInfo) {
       const username = userInfo.username.trim()
       return new Promise((resolve, reject) => {
         login(username, userInfo.password)

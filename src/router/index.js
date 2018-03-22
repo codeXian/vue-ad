@@ -15,6 +15,18 @@ const routerMap = [
       {
         path: 'dashboard',
         component: () => import('@/views/dashboard')
+      },
+      {
+        path: 'tinymce',
+        component: () => import('@/views/tinymce')
+      },
+      {
+        path: 'echarts',
+        component: () => import('@/views/echarts')
+      },
+      {
+        path: 'form',
+        component: () => import('@/views/form')
       }
     ]
   }

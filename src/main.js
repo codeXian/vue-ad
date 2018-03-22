@@ -11,11 +11,24 @@ import {
   FormItem,
   Input,
   Button,
-  Aside,
   Menu,
   MenuItem,
   Submenu,
-  MenuItemGroup
+  MenuItemGroup,
+  Dropdown,
+  DropdownMenu,
+  DropdownItem,
+  Dialog,
+  Upload,
+  Select,
+  Option,
+  DatePicker,
+  TimePicker,
+  Switch,
+  CheckboxGroup,
+  Checkbox,
+  RadioGroup,
+  Radio
 } from 'element-ui'
 import App from './App'
 import router from './router'
@@ -35,11 +48,24 @@ Vue.use(Form)
 Vue.use(FormItem)
 Vue.use(Input)
 Vue.use(Button)
-Vue.use(Aside)
 Vue.use(Menu)
 Vue.use(MenuItem)
 Vue.use(Submenu)
 Vue.use(MenuItemGroup)
+Vue.use(Dropdown)
+Vue.use(DropdownMenu)
+Vue.use(DropdownItem)
+Vue.use(Dialog)
+Vue.use(Upload)
+Vue.use(Select)
+Vue.use(Option)
+Vue.use(DatePicker)
+Vue.use(TimePicker)
+Vue.use(Switch)
+Vue.use(CheckboxGroup)
+Vue.use(Checkbox)
+Vue.use(RadioGroup)
+Vue.use(Radio)
 
 /* eslint-disable no-new */
 new Vue({
